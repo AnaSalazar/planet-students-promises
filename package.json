@@ -4,7 +4,8 @@
   "description": "Ejercico para practicar promises y node\u001b[D\u001b[D\u001b[N\u001b[C\u001b[C\u001b[C.js",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "materialize-css": "^0.99.0"
   },
   "devDependencies": {},
   "scripts": {
