@@ -12,23 +12,35 @@ function getJSON(url) {
 }
 
 getJSON("data/earth-like-results.json")
-  .then(function(mensaje){return(getJSON(mensaje.results[0]))})
-  .then(function(resultado){imprimir(resultado)})
+  .then(function(mensaje){return(mensaje.results)})
+  .then(function(exoplanetas){
+    exoplanetas.forEach(function(exoplaneta){
+      getJSON(exoplaneta)
+        .then(function(exoplaneta){
+          return (exoplaneta)
+        })
+        tarjeta();
+    })
+  })
 
-var plantilla = "<div class='row'>" +
-  "<div class='col s12 m6'>" + "<div class='card'>"
-  + "<div class='card-content white-text'>" + '<img src="" alt="planetas">'
-  + "<span class='card-title'>__planeta__</span>" + "<p>__dato1__</p>" +
-  "<p>__dato2__</p>" + "</div>" + "</div>" + "</div>" +"</div>";
+var tarjeta = function(exoplaneta){
+  var divRow = document.createElement("div");
+  var divCol = document.createElement("div");
+  var divCard = document.createElement("div");
+  var divCardContent = document.createElement("div");
+  var imagen = document.createElement("img");
+  var nombre = document.createElement("p");
+  var dato1 = document.createElement("p");
+  var dato2 = document.createElement("p");
 
-var imprimir = function(resultado){
-  var plantillaPlaneta = "";
-  plantillaPlaneta += plantilla.replace("__planeta__", resultado.pl_name)
-  console.log(plantillaPlaneta);
-  var espacio = document.getElementById('espacioExoplanetas');
-  console.log(espacio);
-  espacio.innerHTML(plantillaPlaneta);
-  console.log(espacio);
-};
+  divRow.className = "row";
+  divCol.className = "col s12";
+  divCard.className = "card blue-grey darken-1";
+  divCardContent.className = "card-content white-text";
+  imagen.className = "s8";
+  nombre.className = "card-title";
+  // dato1.className = "card-content white-text";
+  // dato2.className = "card-content white-text";
+}
 
 // document.onready()
