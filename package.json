@@ -1,0 +1,28 @@
+{
+  "name": "planet-students-promises",
+  "version": "1.0.0",
+  "description": "Ejercico para practicar promises y node\u001b[D\u001b[D\u001b[N\u001b[C\u001b[C\u001b[C.js",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnaSalazar/planet-students-promises.git"
+  },
+  "keywords": [
+    "promises",
+    "Node.js",
+    "javascript"
+  ],
+  "author": "AnaSalazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnaSalazar/planet-students-promises/issues"
+  },
+  "homepage": "https://github.com/AnaSalazar/planet-students-promises#readme"
+}
